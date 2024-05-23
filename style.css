@@ -1,0 +1,35 @@
+body{
+    text-align:center !important;
+    margin-left:15%;
+    margin-right:15%;
+    margin-top:1%;
+    background-color: #7ebbf7;
+}
+
+h1{
+    color:white;
+    font-weight: bolder;
+}
+
+h4{
+    color:#040c3f;
+}
+
+math{
+    font-size: 20px;
+}
+
+.slider{
+    width:50%;
+    background: #ccc;
+}
+
+
+.slider::-moz-range-progress {
+    background-color: #0b67b8
+}
+
+.slider::-webkit-slider-runnable-track {
+    background-color: #0b67b8
+}
+
