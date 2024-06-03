@@ -16,7 +16,9 @@
     <h1>Το Ορισμένο Ολοκλήρωμα</h1><br>
     <div style="width: 100%;background-color:white;">
         <br>
-        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Η έννοια του ορισμένου ολοκληρώματος</h4><br>
+        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Η έννοια του ορισμένου ολοκληρώματος</h4><a style="font-size: 16px;" href="javascript:void(0)" onclick="show_theory('theory_1');">Παρουσίαση Θεωρίας</a>
+        <br>
+        <div id="theory_1">
         <p>Έστω μία συνάρτηση f <b>συνεχής</b> στο [α,β]. Με τα σημεία <math>α = <msub>
                     <mi>x</mi>
                     <mi>0</mi>
@@ -152,6 +154,7 @@
                 </msub>)Δx)
             </math>
         </p>
+    </div>
         <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 1</h4><br>
         <p>Μπορούμε να παρατηρήσουμε ότι όσο μικρότερη τιμή παίρνει το Δx, τόσο καλύτερη η προσέγγιση της τιμής του
             ολοκληρώματος.<br>
@@ -165,7 +168,9 @@
                 <mi>8-2</mi>
                 <mi><label id="v_2"></label></mi>
             </mfrac>=<label id='dx'></label></math><br><br>
-        <input type="range" min="1" max="100" class="slider" oninput="application_1_use(this.value)"><br><br>
+        <input type="range" min="1" max="30" class="slider" oninput="application_1_use(this.value)" value="10"><br>
+        <math style="font-size:15px;">v &#8712; [1,30] </math>
+        <br><br>
         <p>Γνωρίζουμε ότι <math>
                 <munderover>
                     <mo>&int;</mo>
@@ -185,9 +190,13 @@
                     id="area"></label></b><br> ή αλλιώς το <b><label id="area_percentage"></label>%</b> της τιμής του
             ορισμένου ολοκληρώματος.
         </p>
-        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Θεμελιώδες θεώρημα του ολοκληρωτικού λογισμού</h4><br>
+        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Θεμελιώδες θεώρημα του ολοκληρωτικού λογισμού</h4>
+        <a style="font-size: 16px;" href="javascript:void(0)" onclick="show_theory('theory_2');">Παρουσίαση Θεωρίας</a>
+        <br>
+        <div id="theory_2">
         <p>
-            Έστω f μία <b>συνεχής</b> συνάρτηση σε ένα διάστημα [α,β]. Αν G είναι μία παράγουσα της f στο [α,β], τότε <br>
+            Έστω f μία <b>συνεχής</b> συνάρτηση σε ένα διάστημα [α,β]. Αν G είναι μία παράγουσα της f στο [α,β], τότε
+            <br>
             <math>
                 <munderover>
                     <mo>&int;</mo>
@@ -199,94 +208,273 @@
                     </mrow>
                 </munderover>f(x)dx=G(β)-G(α)
             </math>
-        </p>
+        </div>
         <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 2</h4><br>
-        <p>Παρακάτω παρουσιάζεται η συνάρτηση 
-            <math>f(x)=<msup><mo>2</mo><mo>x</mo></msup></math>, επέλεξε το α και το β για να δείς την τιμή του ολοκληρώματος.<br>
-            Ισχύει ότι η παράγουσα F(x) της f(x) είναι η συνάρτηση <math>F(x)=<mfrac><mi>2<sup>x</sup></mi><mi>ln2</mi></mfrac></math>.<br>
-            G(x)=F(x)+c, όπου c	&#8712; &#8477;.
+        <p>Παρακάτω παρουσιάζεται η συνάρτηση
+            <math>f(x)=<msup>
+                    <mo>2</mo>
+                    <mo>x</mo>
+                </msup></math>, επίλεξε το α και το β για να δείς την τιμή του ολοκληρώματος.<br>
+            Ισχύει ότι η παράγουσα F(x) της f(x) είναι η συνάρτηση <math>F(x)=<mfrac>
+                    <mi>2<sup>x</sup></mi>
+                    <mi>ln2</mi>
+                </mfrac></math>.<br>
+            G(x)=F(x)+c, όπου c &#8712; &#8477;.
         </p>
+        </p>
+        
         <table style="margin-left: auto;margin-right: auto;">
-            <tr><td style="width:500px;">
-        <canvas id="application_2" width="500" height="500"
-            style="background-color: white;border:1px solid black;"></canvas></td><td style="width: 500px;"><br><br>
-        <p>Χρησιμοποίησε τις μπάρες κύλισης για να αλλάξεις τις τιμές στο<br>α και το β.<br>Σε περίπτωση που το α είναι μεγαλύτερο από το β, ισχύει ότι:<br>
-            <math><munderover>
-                <mo>&int;</mo>
-                <mrow>
-                    <mi>α</mi>
-                </mrow>
-                <mrow>
-                    <mi>β</mi>
-                </mrow>
-            </munderover>f(x)dx=-<munderover>
-                <mo>&int;</mo>
-                <mrow>
-                    <mi>β</mi>
-                </mrow>
-                <mrow>
-                    <mi>α</mi>
-                </mrow>
-            </munderover>f(x)dx , β&lt;α </math>
-        </p>
-        <label for="a">Τιμή για το α:&nbsp;</label><input id="a" value="-2" type="range" min="-4" max="3" step="0.1" class="slider" oninput="application_2_a(this.value)" style="width:250px !important">&nbsp;<label id="a_value"></label><br><br>
-        <label for="b">Τιμή για το β:&nbsp;</label><input id="b" value="1" type="range" min="-4" max="3" step="0.1" class="slider" oninput="application_2_b(this.value)" style="width:250px !important">&nbsp;<label id="b_value"></label><br><br>
-        <math><munderover>
-            <mo>&int;</mo>
-            <mrow>
-                <mi><label id="int_a"></label></mi>
-            </mrow>
-            <mrow>
-                <mi><label id="int_b"></label></mi>
-            </mrow>
-        </munderover><msup><mo>2</mo><mo>x</mo></msup>dx=<label id="app_2_result"></label>
-        </td></tr>
+            <tr>
+                <td style="width:500px;">
+                    <canvas id="application_2" width="500" height="500"
+                        style="background-color: white;border:1px solid black;"></canvas>
+                </td>
+                <td style="width: 500px;"><br><br>
+                    <p>Χρησιμοποίησε τις μπάρες κύλισης για να αλλάξεις τις τιμές για το<br>α και το β.<br>Σε περίπτωση
+                        που το α είναι μεγαλύτερο από το β, ισχύει ότι:<br>
+                        <math>
+                            <munderover>
+                                <mo>&int;</mo>
+                                <mrow>
+                                    <mi>α</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi>β</mi>
+                                </mrow>
+                            </munderover>f(x)dx=-<munderover>
+                                <mo>&int;</mo>
+                                <mrow>
+                                    <mi>β</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi>α</mi>
+                                </mrow>
+                            </munderover>f(x)dx , β&lt;α
+                        </math>
+                    </p>
+                    <label for="a">Τιμή για το α:&nbsp;</label><input id="a" value="-2" type="range" min="-4" max="3"
+                        step="0.1" class="slider" oninput="application_2_a(this.value)"
+                        style="width:250px !important">&nbsp;<label id="a_value"></label><br>
+                    <math style="font-size:15px;">α &#8712; [-4,3] </math><br><br>
+                    <label for="b">Τιμή για το β:&nbsp;</label><input id="b" value="1" type="range" min="-4" max="3"
+                        step="0.1" class="slider" oninput="application_2_b(this.value)"
+                        style="width:250px !important">&nbsp;<label id="b_value"></label><br>
+                    <math style="font-size:15px;">β &#8712; [-4,3] </math><br><br>
+                    <math><label id="minus_app_2">-</label>
+                        <munderover>
+                            <mo>&int;</mo>
+                            <mrow>
+                                <mi><label id="int_a"></label></mi>
+                            </mrow>
+                            <mrow>
+                                <mi><label id="int_b"></label></mi>
+                            </mrow>
+                        </munderover>
+                        <msup>
+                            <mo>2</mo>
+                            <mo>x</mo>
+                        </msup>dx=<label id="app_2_result"></label>
+                </td>
+            </tr>
         </table><br><br>
-        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Ορισμένο ολοκλήρωμα περιττής συνάρτησης</h4>
+        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Ορισμένο ολοκλήρωμα άρτιας και περιττής συνάρτησης</h4>
+        <a style="font-size: 16px;" href="javascript:void(0)" onclick="show_theory('theory_3');">Παρουσίαση Θεωρίας</a>
+        <div id="theory_3">
         <p>Έστω f μία <b>συνεχής</b> συνάρτηση στο διάστημα [-α,α].<br> Αν η f είναι <b>περιττή</b> τότε ισχύει<br>
-        <math>
-            <munderover>
-                <mo>&int;</mo>
-                <mrow>
-                    <mi>-α</mi>
-                </mrow>
-                <mrow>
-                    <mi>α</mi>
-                </mrow>
-            </munderover>f(x)dx=0.
-        </math><br>
-        Περιττή ονομάζεται μία συνάρτηση f:[-α,α] &#8594; &#8477; όπου για κάθε x &#8712; [-α,α] ισχύει ότι <br>
-        <math>f(-x)=-f(x)</math>.
-     </p><br>
-     <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 3</h4>
-     <p>Στο παρακάτω σχήμα παρουσιάζεται η γραφική παράσταση της συνάρτησης <math>f(x)=ημx</math>.<br>
-       Ισχύει ότι <math>f(-x)=ημ(-x)=-ημx=-f(x)</math>, άρα η <math>f(x)=ημx</math> είναι περιττή.<br>
-       Ισχύει ότι η παράγουσα <math>F(x)</math> της <math>f(x)</math> είναι η συνάρτηση <math>F(x)=συνx</math>.<br>
-       G(x)=F(x)+c, όπου c	&#8712; &#8477;.
-    </p>
+            <math>
+                <munderover>
+                    <mo>&int;</mo>
+                    <mrow>
+                        <mi>-α</mi>
+                    </mrow>
+                    <mrow>
+                        <mi>α</mi>
+                    </mrow>
+                </munderover>f(x)dx=0.
+            </math><br>
+            Περιττή ονομάζεται μία συνάρτηση f:[-α,α] &#8594; &#8477; όπου για κάθε x &#8712; [-α,α] ισχύει ότι <br>
+            <math>f(-x)=-f(x)</math>.
+            <br>Αν η f είναι <b>Άρτια</b> τότε ισχύει<br>
+            <math>
+                <munderover>
+                    <mo>&int;</mo>
+                    <mrow>
+                        <mi>-α</mi>
+                    </mrow>
+                    <mrow>
+                        <mi>α</mi>
+                    </mrow>
+                </munderover>f(x)dx=
+                2<munderover>
+                    <mo>&int;</mo>
+                    <mrow>
+                        <mi>0</mi>
+                    </mrow>
+                    <mrow>
+                        <mi>α</mi>
+                    </mrow>
+                </munderover>f(x)dx.
+            </math><br>
+            Άρτια ονομάζεται μία συνάρτηση f:[-α,α] &#8594; &#8477; όπου για κάθε x &#8712; [-α,α] ισχύει ότι <br>
+            <math>f(-x)=f(x)</math>.
+        </p><br>
+    </div>
+        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 3 (περιττή συνάρτηση)</h4>
+        <p>Στο παρακάτω σχήμα παρουσιάζεται η γραφική παράσταση της συνάρτησης <math>f(x)=ημx</math>.<br>
+            Ισχύει ότι <math>f(-x)=ημ(-x)=-ημx=-f(x)</math>, άρα η <math>f(x)=ημx</math> είναι περιττή.<br>
+            Ισχύει ότι η παράγουσα <math>F(x)</math> της <math>f(x)</math> είναι η συνάρτηση <math>F(x)=συνx</math>.<br>
+            G(x)=F(x)+c, όπου c &#8712; &#8477;.
+        </p>
         <table style="margin-left:auto;margin-right:auto;">
-            <tr><td width="360"><canvas id="application_3" width="360" height="300"
-                style="background-color: white;border:1px solid black;"></canvas></td>
-                <td width="400">
+            <tr>
+                <td width="360"><canvas id="application_3" width="360" height="300"
+                        style="background-color: white;border:1px solid black;"></canvas></td>
+                <td width="500">
                     <p>Μετακίνησε την μπάρα κύλισης για να άλλαξεις την τιμή του <math>α</math>.</p><br>
-                    <label for="app_3_a">Τιμή για το α:&nbsp;</label><input id="app_3_a" value="60" type="range" min="0" max="100" step="0.1" class="slider" oninput="application_3_use(this.value)" style="width:200px !important">&nbsp;<label id="app_3_a_value"></label><br><br>
-                    <math><munderover>
-                        <mo>&int;</mo>
-                        <mrow>
-                            <mi><label id="app_3_ma_int"></label></mi>
-                        </mrow>
-                        <mrow>
-                            <mi><label id="app_3_a_int"></label></mi>
-                        </mrow>
-                    </munderover>ημxdx=G(<label id="app_3_ma_int_g"></label>)-G(<label id="app_3_a_int_g"></label>)=συν(<label id="app_3_ma_int_syn"></label>)-συν(<label id="app_3_a_int_syn"></label>)=<label id="syn_a"></label>-<label id="syn_ma"></label>=<label id="result_app_3"></label></math>
-                </td></tr>
+                    <label for="app_3_a">Τιμή για το α:&nbsp;</label><input id="app_3_a" value="60" type="range" min="0"
+                        max="100" step="0.1" class="slider" oninput="application_3_use(this.value)"
+                        style="width:200px !important">&nbsp;<label id="app_3_a_value"></label>
+                    <br> <math style="font-size:15px;">α &#8712; [-2π,2π] </math><br><br>
+                    <math>
+                        <munderover>
+                            <mo>&int;</mo>
+                            <mrow>
+                                <mi><label id="app_3_ma_int"></label></mi>
+                            </mrow>
+                            <mrow>
+                                <mi><label id="app_3_a_int"></label></mi>
+                            </mrow>
+                        </munderover>ημxdx=<br>G(<label id="app_3_ma_int_g"></label>)-G(<label
+                            id="app_3_a_int_g"></label>)=συν(<label id="app_3_ma_int_syn"></label>)-συν(<label
+                            id="app_3_a_int_syn"></label>)=<label id="syn_a"></label>-<label id="syn_ma"></label>=<label
+                            id="result_app_3"></label>
+                    </math>
+                </td>
+            </tr>
         </table><br>
+        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 3 (άρτια συνάρτηση)</h4>
+        <p>Στο παρακάτω σχήμα παρουσιάζεται η γραφική παράσταση της συνάρτησης <math>f(x)=συνx</math>.<br>
+            Ισχύει ότι <math>f(-x)=συν(-x)=συνx=f(x)</math>, άρα η <math>f(x)=συνx</math> είναι άρτια.<br>
+            Ισχύει ότι η παράγουσα <math>F(x)</math> της <math>f(x)</math> είναι η συνάρτηση <math>F(x)=-ημx</math>.<br>
+            G(x)=F(x)+c, όπου c &#8712; &#8477;.
+        </p>
+        <table style="margin-left:auto;margin-right:auto;">
+            <tr>
+                <td width="360"><canvas id="application_3_even" width="360" height="300"
+                        style="background-color: white;border:1px solid black;"></canvas></td>
+                <td width="500">
+                    <p>Μετακίνησε την μπάρα κύλισης για να άλλαξεις την τιμή του <math>α</math>.</p><br>
+                    <label for="app_3_a_even">Τιμή για το α:&nbsp;</label><input id="app_3_a_even" value="60"
+                        type="range" min="0" max="100" step="0.1" class="slider"
+                        oninput="application_3_use_even(this.value)" style="width:200px !important">&nbsp;<label
+                        id="app_3_a_value_even"></label>
+                    <br> <math style="font-size:15px;">α &#8712; [-2π,2π] </math><br><br>
+                    <math>
+                        <munderover>
+                            <mo>&int;</mo>
+                            <mrow>
+                                <mi><label id="app_3_ma_int_even"></label></mi>
+                            </mrow>
+                            <mrow>
+                                <mi><label id="app_3_a_int_even"></label></mi>
+                            </mrow>
+                        </munderover>συνxdx=<br>G(<label id="app_3_ma_int_g_even"></label>)-G(<label
+                            id="app_3_a_int_g_even"></label>)=-ημ(<label id="app_3_ma_int_syn_even"></label>)-(-ημ(<label
+                            id="app_3_a_int_syn_even"></label>))=<label id="syn_a_even"></label>-<label
+                            id="syn_ma_even"></label>=<label id="result_app_3_even"></label>
+                    </math><br><br>
+                    <math>2
+                        <munderover>
+                            <mo>&int;</mo>
+                            <mrow>
+                                <mi>0</mi>
+                            </mrow>
+                            <mrow>
+                                <mi><label id="app_3_a_int_even_2"></label></mi>
+                            </mrow>
+                        </munderover>συνxdx=<br>2(G(<label id="app_3_ma_int_g_even_2"></label>)-G(0))=2(-ημ(<label id="app_3_ma_int_syn_even_2"></label>)-ημ(0))=2(<label id="syn_a_even_2"></label>-0</label>)=<label id="result_app_3_even_2"></label>
+                    </math>
+                </td>
+            </tr>
+        </table><br><br>
         <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Eμβαδό επιπέδου χωρίου</h4>
-        <p>Το εμβαδό του επιπέδου χωρίου μίας συνάρτησης είναι το άθροισμα των εμβαδών των χωρίων που βρίσκονται πάνω από τον άξονα x'x <br>
+        <a style="font-size: 16px;" href="javascript:void(0)" onclick="show_theory('theory_4');">Παρουσίαση Θεωρίας</a>
+        <div id="theory_4">
+        <p>Το εμβαδό του επιπέδου χωρίου μίας συνάρτησης είναι το άθροισμα των εμβαδών των χωρίων που βρίσκονται πάνω
+            από τον άξονα x'x <br>
             μείον το άθροισμα των εμβαδών των χωρίων που βρίσκονται κάτω από τον άξονα x'x. (Σχ.25)
         </p> <img src="images\pic_25.png" alt="Ορισμός επιπέδου χωρίου" style="max-width: 100%;height:auto;"><br>
         <p>Γενικά το εμβαδό μίας συνάρτησης με τον άξονα x'x και τις ευθείες x=α και x=β υπολογίζεται ως εξής<br>
             <math>Ε(Ω)=<munderover>
+                    <mo>&int;</mo>
+                    <mrow>
+                        <mi>α</mi>
+                    </mrow>
+                    <mrow>
+                        <mi>β</mi>
+                    </mrow>
+                </munderover>|f(x)|dx</math>.
+        </p>
+    </div>
+        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 4</h4>
+        <p>Όταν θέλουμε να υπολογίσουμε το εμβαδό ανάμεσα σε δύο συναρτήσεις <math>f(x)</math> και <math>g(x)</math><br>
+            και τις ευθείες x=α και x=β υπολογίζεται ως εξής
+            <math>Ε(Ω)=<munderover>
+                    <mo>&int;</mo>
+                    <mrow>
+                        <mi>α</mi>
+                    </mrow>
+                    <mrow>
+                        <mi>β</mi>
+                    </mrow>
+                </munderover>|f(x)-g(x)|dx</math>.
+            Στο παρακάτω σχήμα παρουσιάζονται οι γραφικές παραστάσεις <math>f(x)=x</math> και <math>g(x)=x&sup3;</math>.
+            Έστω <math>h(x)=f(x)-g(x)</math>. Η παράγουσα της συνάρτησης αυτής είναι η <math>H(x)=<mfrac>
+                    <mi>x&sup2;</mi>
+                    <mi>2</mi>
+                </mfrac>-<mfrac>
+                    <mi>x<sup>4</sup></mi>
+                    <mi>4</mi>
+                </mfrac>+c , c &#8712; &#8477; </math>
+        </p>
+        <table style="margin-left:auto;margin-right:auto;">
+            <tr>
+                <td width="500"><canvas style="background-color: white;border:1px solid black;" width="500" height="500"
+                        id="application_4"></canvas></td>
+                <td width="500">Μετακίνησε τις μπάρες κύλισης για να μεταβάλλεις τις τιμές <br>για το α και το β.<br>
+                    Σε περίπτωση που το α ή το β βρίσκεται έξω από τα σημεία τομής των f,g το εμβαδό θα υπολογίζεται με
+                    τις ευθείες <math>x=α,x=β</math> αντίστοιχα.<br><br>
+                    <label for="app_4_a">Τιμή για το α:&nbsp;</label><input value="70" id="app_4_a" type="range"
+                        class="slider" width="200" min="0" max="200" step="0.1"
+                        oninput="application_4_a(this.value);"><label id="app_4_a_value"></label><br>
+                    <math style="font-size:15px;">α &#8712; [-2,2] </math><br><br>
+                    <label for="app_4_b">Τιμή για το β:&nbsp;</label><input value="120" id="app_4_b" type="range"
+                        class="slider" width="200" min="0" max="200" step="0.1"
+                        oninput="application_4_b(this.value);"><label id="app_4_b_value"></label><br>
+                    <math style="font-size:15px;">β &#8712; [-2,2] </math><br><br>
+                    <math>Ε(Ω)=<munderover>
+                            <mo>&int;</mo>
+                            <mrow>
+                                <mi><label id="app_4_a_result"></label></mi>
+                            </mrow>
+                            <mrow>
+                                <mi><label id="app_4_b_result"></label></mi>
+                            </mrow>
+                        </munderover>|x-x<sup>3</sup>|dx=<label id="app_4_result"></label>
+
+
+
+                    </math>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή Αξιολόγησης</h4>
+        <p>
+            Παρακάτω παρουσιάζεται η γραφική παράσταση της συνάρτησης <math>f(x)=e<sup>x</sup>+x</math>.<br>
+            Η εφαρμογή δίνει τις τιμές <math>α, β</math> και ζητά την λύση του ολοκληρώματος 
+            <math>
+            <munderover>
                 <mo>&int;</mo>
                 <mrow>
                     <mi>α</mi>
@@ -294,46 +482,38 @@
                 <mrow>
                     <mi>β</mi>
                 </mrow>
-            </munderover>|f(x)|dx</math>.
-        </p>
-        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 4</h4>
-        <p>Όταν θέλουμε να υπολογίσουμε το εμβαδό ανάμεσα σε δύο συναρτήσεις <math>f(x)</math> και <math>g(x)</math><br>
-        και τις ευθείες x=α και x=β υπολογίζεται ως εξής
-        <math>Ε(Ω)=<munderover>
+            </munderover>f(x)dx
+        </math>.<br>
+        </p><a style="font-size: 16px;" href="javascript:void(0)" onclick="show_theory('show_help');">Προβολή Βοήθειας</a><br><br>
+        <div id="show_help">
+            Έχω ότι η παράγουσα της <math>f(x)=e<sup>x</sup>+x</math> είναι η <math>F(x)=e<sup>x</sup>+x<sup>2</sup></math>,με την <math>G(x)=F(x)+x, c &#8712; &#8477; </math><br>
+            Επομένως το ολοκλήρωμα έχει την τιμή <math>
+                <munderover>
+                    <mo>&int;</mo>
+                    <mrow>
+                        <mi>α</mi>
+                    </mrow>
+                    <mrow>
+                        <mi>β</mi>
+                    </mrow>
+                </munderover>f(x)dx=G(β)-G(a)=F(β)-F(α)=e<sup>β</sup>+β<sup>2</sup>-(e<sup>α</sup>+α<sup>2</sup>)
+            </math>.
+            <br><br>
+        </div>
+        <canvas style="background-color: white;border:1px solid black;" width="500" height="350"
+        id="application_5"> </canvas><br><br>
+        <math><munderover>
             <mo>&int;</mo>
             <mrow>
-                <mi>α</mi>
+                <mi><label id="app_5_a"></label></mi>
             </mrow>
             <mrow>
-                <mi>β</mi>
+                <mi><label id="app_5_b"></label></mi>
             </mrow>
-        </munderover>|f(x)-g(x)|dx</math>.
-        Στο παρακάτω σχήμα παρουσιάζονται οι γραφικές παραστάσεις <math>f(x)=x</math> και <math>g(x)=x&sup3;</math>.
-        Έστω <math>h(x)=f(x)-g(x)</math>. Η παράγουσα της συνάρτησης αυτής είναι η <math>H(x)=<mfrac><mi>x&sup2;</mi><mi>2</mi></mfrac>-<mfrac><mi>x<sup>4</sup></mi><mi>4</mi></mfrac>+c , c &#8712; &#8477; </math>
-        </p>
-        <table style="margin-left:auto;margin-right:auto;">
-            <tr>
-                <td width="500"><canvas style="background-color: white;border:1px solid black;" width="500" height="500" id="application_4"></canvas></td>
-                <td width="500">Μετακίνησε τις μπάρες κύλισης για να μεταβάλλεις τις τιμές <br>για το α και του β.<br><br>
-                    <label for="app_4_a">Τιμή για το α:&nbsp;</label><input value="20" id="app_4_a" type="range" class="slider" width="200" min="0" max="100" step="0.1" oninput="application_4_a(this.value);"><label id="app_4_a_value" ></label><br><br>
-                    <label for="app_4_b">Τιμή για το β:&nbsp;</label><input value="70" id="app_4_b" type="range" class="slider" width="200" min="0" max="100" step="0.1" oninput="application_4_b(this.value);"><label id="app_4_b_value" ></label><br><br>
-                    <math>Ε(Ω)=<munderover>
-                        <mo>&int;</mo>
-                        <mrow>
-                            <mi><label id="app_4_a_result"></label></mi>
-                        </mrow>
-                        <mrow>
-                            <mi><label id="app_4_b_result"></label></mi>
-                        </mrow>
-                    </munderover>|x-x<sup>3</sup>|dx=<label id="app_4_result"></label>
-            
-                    
-                
-                </math>
-                </td>
-            </tr>
-        </table>
+        </munderover>f(x)dx</math>=&nbsp;&nbsp;<input type="text" style="width:15%;" id="app_5_answer">&nbsp;&nbsp;&nbsp;<label id="app_5_result"></label><br><br>
+        <button type="button" onclick="application_5_check();">Έλεγχος Απάντησης</button>&nbsp;&nbsp;<button type="button" onclick="application_5_solve();">Προβολή Απάντησης</button>&nbsp;&nbsp;<button type="button" onclick="application_5_initialize_test();">Νέα Προσπάθεία</button>
         <label id="values"></label>
+
         <br><br><br><br>
     </div>
 </body>
