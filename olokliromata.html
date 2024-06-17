@@ -16,145 +16,147 @@
     <h1>Το Ορισμένο Ολοκλήρωμα</h1><br>
     <div style="width: 100%;background-color:white;">
         <br>
-        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Η έννοια του ορισμένου ολοκληρώματος</h4><a style="font-size: 16px;" href="javascript:void(0)" onclick="show_theory('theory_1');">Παρουσίαση Θεωρίας</a>
+        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Η έννοια του ορισμένου ολοκληρώματος</h4><a
+            style="font-size: 16px;" href="javascript:void(0)" onclick="show_theory('theory_1');">Παρουσίαση Θεωρίας</a>
         <br>
         <div id="theory_1">
-        <p>Έστω μία συνάρτηση f <b>συνεχής</b> στο [α,β]. Με τα σημεία <math>α = <msub>
-                    <mi>x</mi>
-                    <mi>0</mi>
-                </msub> &lt; <msub>
-                    <mi>x</mi>
-                    <mi>1</mi>
-                </msub> &lt; <msub>
-                    <mi>x</mi>
-                    <mi>2</mi>
-                </msub> &lt; ... &lt; <msub>
-                    <mi>x</mi>
-                    <mi>v</mi>
-                </msub> = β </math>
-            <br>χωρίζουμε το διάστημα [α,β] σε ν ισομήκη υποδιαστήματα μήκους <math>
-                <mrow>Δx = <mfrac>
-                        <mi>β-α</mi>
+            <p>Έστω μία συνάρτηση f <b>συνεχής</b> στο [α,β]. Με τα σημεία <math>α = <msub>
+                        <mi>x</mi>
+                        <mi>0</mi>
+                    </msub> &lt; <msub>
+                        <mi>x</mi>
+                        <mi>1</mi>
+                    </msub> &lt; <msub>
+                        <mi>x</mi>
+                        <mi>2</mi>
+                    </msub> &lt; ... &lt; <msub>
+                        <mi>x</mi>
                         <mi>v</mi>
-                    </mfrac>
-                </mrow>
-            </math>.
-        </p>
-        <img src="images\pic_10.png" alt="Ορισμός Ολοκληρωματος κατα Riemann" style="max-width: 40%;height:auto;"><br>
-        <p>Στη συνέχεια επιλέγουμε αυθαίρετα ένα <math>
-                <msub>
-                    <mi>ξ</mi>
-                    <mi>κ</mi>
-                </msub> &isin; [<msub>
-                    <mi>x</mi>
-                    <mi>κ-1</mi>
-                </msub> , <msub>
-                    <mi>x</mi>
-                    <mi>κ</mi>
-                </msub> ]
-            </math> , για κάθε <math>κ &isin; {1,2,...,v}</math>, και σχηματίζουμε το άθροισμα</math><br>
-            <math>
-                <msub>
-                    <mi>S</mi>
-                    <mi>v</mi>
-                </msub> = f(<msub>
-                    <mi>ξ</mi>
-                    <mi>1</mi>
-                </msub>)Δx+f(<msub>
-                    <mi>ξ</mi>
-                    <mi>2</mi>
-                </msub>)Δx+...+f(<msub>
-                    <mi>ξ</mi>
-                    <mi>v</mi>
-                </msub>)Δx=[f(<msub>
-                    <mi>ξ</mi>
-                    <mi>1</mi>
-                </msub>)+...+f(<msub>
-                    <mi>ξ</mi>
-                    <mi>v</mi>
-                </msub>)]Δx
-            </math>
-            <br>Το οποίο συμβολίζεται σύντομα ως:<br>
-            <math>
-                <msub>
-                    <mi>S</mi>
-                    <mi>v</mi>
-                </msub> =<munderover>
-                    <mo>&sum;</mo>
-                    <mrow>
-                        <mi>κ=1</mi>
+                    </msub> = β </math>
+                <br>χωρίζουμε το διάστημα [α,β] σε ν ισομήκη υποδιαστήματα μήκους <math>
+                    <mrow>Δx = <mfrac>
+                            <mi>β-α</mi>
+                            <mi>v</mi>
+                        </mfrac>
                     </mrow>
-                    <mrow>
+                </math>.
+            </p>
+            <img src="images\pic_10.png" alt="Ορισμός Ολοκληρωματος κατα Riemann"
+                style="max-width: 40%;height:auto;"><br>
+            <p>Στη συνέχεια επιλέγουμε αυθαίρετα ένα <math>
+                    <msub>
+                        <mi>ξ</mi>
+                        <mi>κ</mi>
+                    </msub> &isin; [<msub>
+                        <mi>x</mi>
+                        <mi>κ-1</mi>
+                    </msub> , <msub>
+                        <mi>x</mi>
+                        <mi>κ</mi>
+                    </msub> ]
+                </math> , για κάθε <math>κ &isin; {1,2,...,v}</math>, και σχηματίζουμε το άθροισμα</math><br>
+                <math>
+                    <msub>
+                        <mi>S</mi>
                         <mi>v</mi>
-                    </mrow>
-                </munderover>f(<msub>
-                    <mi>ξ</mi>
-                    <mi>κ</mi>
-                </msub>)Δx
-            </math><br>(Το άθροισμα αυτό ονομάζεται ένα άθροισμα Riemann).<br><br>
-            Αποδεικνύεται ότι,<br>
-            "Το όριο του αθροίσματος S<sub>v</sub>, δηλαδή το <math>
-                <munderover>
-                    <mo>lim</mo>
-                    <mrow>
-                        <mi>v&#8594;&#8734;</mi>
-                    </mrow>
-                </munderover>(<munderover>
-                    <mo>&sum;</mo>
-                    <mrow>
-                        <mi>κ=1</mi>
-                    </mrow>
-                    <mrow>
+                    </msub> = f(<msub>
+                        <mi>ξ</mi>
+                        <mi>1</mi>
+                    </msub>)Δx+f(<msub>
+                        <mi>ξ</mi>
+                        <mi>2</mi>
+                    </msub>)Δx+...+f(<msub>
+                        <mi>ξ</mi>
                         <mi>v</mi>
-                    </mrow>
-                </munderover>f(<msub>
-                    <mi>ξ</mi>
-                    <mi>κ</mi>
-                </msub>)Δx)
-            </math> υπάρχει στο <b>R</b> και είναι<br>ανεξάρτητο από την επιλογή των ενδιάμεσων σημείων
-            ξ<sub>κ</sub>".<br>
-            Το παραπάνω όριο ονομάζεται <b>ορισμένο ολοκλήρωμα</b> της συνεχούς συνάρτησης f από το <br>
-            α στο β, συμβολίζεται με <math>
-                <munderover>
-                    <mo>&int;</mo>
-                    <mrow>
-                        <mi>α</mi>
-                    </mrow>
-                    <mrow>
-                        <mi>β</mi>
-                    </mrow>
-                </munderover>f(x)dx
-            </math> και ονομάζεται "ολοκλήρωμα της f από το α στο β".<br>
-            Δηλαδή,<br>
-            <math>
-                <munderover>
-                    <mo>&int;</mo>
-                    <mrow>
-                        <mi>α</mi>
-                    </mrow>
-                    <mrow>
-                        <mi>β</mi>
-                    </mrow>
-                </munderover>f(x)dx=<munderover>
-                    <mo>lim</mo>
-                    <mrow>
-                        <mi>v&#8594;&#8734;</mi>
-                    </mrow>
-                </munderover>(<munderover>
-                    <mo>&sum;</mo>
-                    <mrow>
-                        <mi>κ=1</mi>
-                    </mrow>
-                    <mrow>
+                    </msub>)Δx=[f(<msub>
+                        <mi>ξ</mi>
+                        <mi>1</mi>
+                    </msub>)+...+f(<msub>
+                        <mi>ξ</mi>
                         <mi>v</mi>
-                    </mrow>
-                </munderover>f(<msub>
-                    <mi>ξ</mi>
-                    <mi>κ</mi>
-                </msub>)Δx)
-            </math>
-        </p>
-    </div>
+                    </msub>)]Δx
+                </math>
+                <br>Το οποίο συμβολίζεται σύντομα ως:<br>
+                <math>
+                    <msub>
+                        <mi>S</mi>
+                        <mi>v</mi>
+                    </msub> =<munderover>
+                        <mo>&sum;</mo>
+                        <mrow>
+                            <mi>κ=1</mi>
+                        </mrow>
+                        <mrow>
+                            <mi>v</mi>
+                        </mrow>
+                    </munderover>f(<msub>
+                        <mi>ξ</mi>
+                        <mi>κ</mi>
+                    </msub>)Δx
+                </math><br>(Το άθροισμα αυτό ονομάζεται ένα άθροισμα Riemann).<br><br>
+                Αποδεικνύεται ότι,<br>
+                "Το όριο του αθροίσματος S<sub>v</sub>, δηλαδή το <math>
+                    <munderover>
+                        <mo>lim</mo>
+                        <mrow>
+                            <mi>v&#8594;&#8734;</mi>
+                        </mrow>
+                    </munderover>(<munderover>
+                        <mo>&sum;</mo>
+                        <mrow>
+                            <mi>κ=1</mi>
+                        </mrow>
+                        <mrow>
+                            <mi>v</mi>
+                        </mrow>
+                    </munderover>f(<msub>
+                        <mi>ξ</mi>
+                        <mi>κ</mi>
+                    </msub>)Δx)
+                </math> υπάρχει στο <b>R</b> και είναι<br>ανεξάρτητο από την επιλογή των ενδιάμεσων σημείων
+                ξ<sub>κ</sub>".<br>
+                Το παραπάνω όριο ονομάζεται <b>ορισμένο ολοκλήρωμα</b> της συνεχούς συνάρτησης f από το <br>
+                α στο β, συμβολίζεται με <math>
+                    <munderover>
+                        <mo>&int;</mo>
+                        <mrow>
+                            <mi>α</mi>
+                        </mrow>
+                        <mrow>
+                            <mi>β</mi>
+                        </mrow>
+                    </munderover>f(x)dx
+                </math> και ονομάζεται "ολοκλήρωμα της f από το α στο β".<br>
+                Δηλαδή,<br>
+                <math>
+                    <munderover>
+                        <mo>&int;</mo>
+                        <mrow>
+                            <mi>α</mi>
+                        </mrow>
+                        <mrow>
+                            <mi>β</mi>
+                        </mrow>
+                    </munderover>f(x)dx=<munderover>
+                        <mo>lim</mo>
+                        <mrow>
+                            <mi>v&#8594;&#8734;</mi>
+                        </mrow>
+                    </munderover>(<munderover>
+                        <mo>&sum;</mo>
+                        <mrow>
+                            <mi>κ=1</mi>
+                        </mrow>
+                        <mrow>
+                            <mi>v</mi>
+                        </mrow>
+                    </munderover>f(<msub>
+                        <mi>ξ</mi>
+                        <mi>κ</mi>
+                    </msub>)Δx)
+                </math>
+            </p>
+        </div>
         <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 1</h4><br>
         <p>Μπορούμε να παρατηρήσουμε ότι όσο μικρότερη τιμή παίρνει το Δx, τόσο καλύτερη η προσέγγιση της τιμής του
             ολοκληρώματος.<br>
@@ -194,20 +196,21 @@
         <a style="font-size: 16px;" href="javascript:void(0)" onclick="show_theory('theory_2');">Παρουσίαση Θεωρίας</a>
         <br>
         <div id="theory_2">
-        <p>
-            Έστω f μία <b>συνεχής</b> συνάρτηση σε ένα διάστημα [α,β]. Αν G είναι μία παράγουσα της f στο [α,β], τότε
-            <br>
-            <math>
-                <munderover>
-                    <mo>&int;</mo>
-                    <mrow>
-                        <mi>α</mi>
-                    </mrow>
-                    <mrow>
-                        <mi>β</mi>
-                    </mrow>
-                </munderover>f(x)dx=G(β)-G(α)
-            </math>
+            <p>
+                Έστω f μία <b>συνεχής</b> συνάρτηση σε ένα διάστημα [α,β]. Αν G είναι μία παράγουσα της f στο [α,β],
+                τότε
+                <br>
+                <math>
+                    <munderover>
+                        <mo>&int;</mo>
+                        <mrow>
+                            <mi>α</mi>
+                        </mrow>
+                        <mrow>
+                            <mi>β</mi>
+                        </mrow>
+                    </munderover>f(x)dx=G(β)-G(α)
+                </math>
         </div>
         <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 2</h4><br>
         <p>Παρακάτω παρουσιάζεται η συνάρτηση
@@ -222,7 +225,7 @@
             G(x)=F(x)+c, όπου c &#8712; &#8477;.
         </p>
         </p>
-        
+
         <table style="margin-left: auto;margin-right: auto;">
             <tr>
                 <td style="width:500px;">
@@ -280,49 +283,49 @@
         <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Ορισμένο ολοκλήρωμα άρτιας και περιττής συνάρτησης</h4>
         <a style="font-size: 16px;" href="javascript:void(0)" onclick="show_theory('theory_3');">Παρουσίαση Θεωρίας</a>
         <div id="theory_3">
-        <p>Έστω f μία <b>συνεχής</b> συνάρτηση στο διάστημα [-α,α].<br> Αν η f είναι <b>περιττή</b> τότε ισχύει<br>
-            <math>
-                <munderover>
-                    <mo>&int;</mo>
-                    <mrow>
-                        <mi>-α</mi>
-                    </mrow>
-                    <mrow>
-                        <mi>α</mi>
-                    </mrow>
-                </munderover>f(x)dx=0.
-            </math><br>
-            Περιττή ονομάζεται μία συνάρτηση f:[-α,α] &#8594; &#8477; όπου για κάθε x &#8712; [-α,α] ισχύει ότι <br>
-            <math>f(-x)=-f(x)</math>.
-            <br>Αν η f είναι <b>Άρτια</b> τότε ισχύει<br>
-            <math>
-                <munderover>
-                    <mo>&int;</mo>
-                    <mrow>
-                        <mi>-α</mi>
-                    </mrow>
-                    <mrow>
-                        <mi>α</mi>
-                    </mrow>
-                </munderover>f(x)dx=
-                2<munderover>
-                    <mo>&int;</mo>
-                    <mrow>
-                        <mi>0</mi>
-                    </mrow>
-                    <mrow>
-                        <mi>α</mi>
-                    </mrow>
-                </munderover>f(x)dx.
-            </math><br>
-            Άρτια ονομάζεται μία συνάρτηση f:[-α,α] &#8594; &#8477; όπου για κάθε x &#8712; [-α,α] ισχύει ότι <br>
-            <math>f(-x)=f(x)</math>.
-        </p><br>
-    </div>
+            <p>Έστω f μία <b>συνεχής</b> συνάρτηση στο διάστημα [-α,α].<br> Αν η f είναι <b>περιττή</b> τότε ισχύει<br>
+                <math>
+                    <munderover>
+                        <mo>&int;</mo>
+                        <mrow>
+                            <mi>-α</mi>
+                        </mrow>
+                        <mrow>
+                            <mi>α</mi>
+                        </mrow>
+                    </munderover>f(x)dx=0.
+                </math><br>
+                Περιττή ονομάζεται μία συνάρτηση f:[-α,α] &#8594; &#8477; όπου για κάθε x &#8712; [-α,α] ισχύει ότι <br>
+                <math>f(-x)=-f(x)</math>.
+                <br>Αν η f είναι <b>Άρτια</b> τότε ισχύει<br>
+                <math>
+                    <munderover>
+                        <mo>&int;</mo>
+                        <mrow>
+                            <mi>-α</mi>
+                        </mrow>
+                        <mrow>
+                            <mi>α</mi>
+                        </mrow>
+                    </munderover>f(x)dx=
+                    2<munderover>
+                        <mo>&int;</mo>
+                        <mrow>
+                            <mi>0</mi>
+                        </mrow>
+                        <mrow>
+                            <mi>α</mi>
+                        </mrow>
+                    </munderover>f(x)dx.
+                </math><br>
+                Άρτια ονομάζεται μία συνάρτηση f:[-α,α] &#8594; &#8477; όπου για κάθε x &#8712; [-α,α] ισχύει ότι <br>
+                <math>f(-x)=f(x)</math>.
+            </p><br>
+        </div>
         <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 3 (περιττή συνάρτηση)</h4>
         <p>Στο παρακάτω σχήμα παρουσιάζεται η γραφική παράσταση της συνάρτησης <math>f(x)=ημx</math>.<br>
             Ισχύει ότι <math>f(-x)=ημ(-x)=-ημx=-f(x)</math>, άρα η <math>f(x)=ημx</math> είναι περιττή.<br>
-            Ισχύει ότι η παράγουσα <math>F(x)</math> της <math>f(x)</math> είναι η συνάρτηση <math>F(x)=συνx</math>.<br>
+            Ισχύει ότι η παράγουσα <math>F(x)</math> της <math>f(x)</math> είναι η συνάρτηση <math>F(x)=-συνx</math>.<br>
             G(x)=F(x)+c, όπου c &#8712; &#8477;.
         </p>
         <table style="margin-left:auto;margin-right:auto;">
@@ -345,14 +348,14 @@
                                 <mi><label id="app_3_a_int"></label></mi>
                             </mrow>
                         </munderover>ημxdx=<br>G(<label id="app_3_ma_int_g"></label>)-G(<label
-                            id="app_3_a_int_g"></label>)=συν(<label id="app_3_ma_int_syn"></label>)-συν(<label
-                            id="app_3_a_int_syn"></label>)=<label id="syn_a"></label>-<label id="syn_ma"></label>=<label
+                            id="app_3_a_int_g"></label>)=-συν(<label id="app_3_ma_int_syn"></label>)-(-συν(<label
+                            id="app_3_a_int_syn"></label>))=<label id="syn_a"></label>-<label id="syn_ma"></label>=<label
                             id="result_app_3"></label>
                     </math>
                 </td>
             </tr>
         </table><br>
-        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 3 (άρτια συνάρτηση)</h4>
+        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 4 (άρτια συνάρτηση)</h4>
         <p>Στο παρακάτω σχήμα παρουσιάζεται η γραφική παράσταση της συνάρτησης <math>f(x)=συνx</math>.<br>
             Ισχύει ότι <math>f(-x)=συν(-x)=συνx=f(x)</math>, άρα η <math>f(x)=συνx</math> είναι άρτια.<br>
             Ισχύει ότι η παράγουσα <math>F(x)</math> της <math>f(x)</math> είναι η συνάρτηση <math>F(x)=-ημx</math>.<br>
@@ -379,9 +382,10 @@
                                 <mi><label id="app_3_a_int_even"></label></mi>
                             </mrow>
                         </munderover>συνxdx=<br>G(<label id="app_3_ma_int_g_even"></label>)-G(<label
-                            id="app_3_a_int_g_even"></label>)=-ημ(<label id="app_3_ma_int_syn_even"></label>)-(-ημ(<label
-                            id="app_3_a_int_syn_even"></label>))=<label id="syn_a_even"></label>-<label
-                            id="syn_ma_even"></label>=<label id="result_app_3_even"></label>
+                            id="app_3_a_int_g_even"></label>)=-ημ(<label
+                            id="app_3_ma_int_syn_even"></label>)-(-ημ(<label id="app_3_a_int_syn_even"></label>))=<label
+                            id="syn_a_even"></label>-<label id="syn_ma_even"></label>=<label
+                            id="result_app_3_even"></label>
                     </math><br><br>
                     <math>2
                         <munderover>
@@ -392,7 +396,9 @@
                             <mrow>
                                 <mi><label id="app_3_a_int_even_2"></label></mi>
                             </mrow>
-                        </munderover>συνxdx=<br>2(G(<label id="app_3_ma_int_g_even_2"></label>)-G(0))=2(-ημ(<label id="app_3_ma_int_syn_even_2"></label>)-ημ(0))=2(<label id="syn_a_even_2"></label>-0</label>)=<label id="result_app_3_even_2"></label>
+                        </munderover>συνxdx=<br>2(G(<label id="app_3_ma_int_g_even_2"></label>)-G(0))=2(-ημ(<label
+                            id="app_3_ma_int_syn_even_2"></label>)-ημ(0))=2(<label
+                            id="syn_a_even_2"></label>-0</label>)=<label id="result_app_3_even_2"></label>
                     </math>
                 </td>
             </tr>
@@ -400,12 +406,27 @@
         <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Eμβαδό επιπέδου χωρίου</h4>
         <a style="font-size: 16px;" href="javascript:void(0)" onclick="show_theory('theory_4');">Παρουσίαση Θεωρίας</a>
         <div id="theory_4">
-        <p>Το εμβαδό του επιπέδου χωρίου μίας συνάρτησης είναι το άθροισμα των εμβαδών των χωρίων που βρίσκονται πάνω
-            από τον άξονα x'x <br>
-            μείον το άθροισμα των εμβαδών των χωρίων που βρίσκονται κάτω από τον άξονα x'x. (Σχ.25)
-        </p> <img src="images\pic_25.png" alt="Ορισμός επιπέδου χωρίου" style="max-width: 100%;height:auto;"><br>
-        <p>Γενικά το εμβαδό μίας συνάρτησης με τον άξονα x'x και τις ευθείες x=α και x=β υπολογίζεται ως εξής<br>
-            <math>Ε(Ω)=<munderover>
+            <p>Το εμβαδό του επιπέδου χωρίου μίας συνάρτησης είναι το άθροισμα των εμβαδών των χωρίων που βρίσκονται
+                πάνω
+                από τον άξονα x'x <br>
+                μείον το άθροισμα των εμβαδών των χωρίων που βρίσκονται κάτω από τον άξονα x'x.
+            </p> <img src="images\pic_25.png" alt="Ορισμός επιπέδου χωρίου" style="max-width: 100%;height:auto;"><br>
+            <p>Γενικά το εμβαδό μίας συνάρτησης με τον άξονα x'x και τις ευθείες x=α και x=β υπολογίζεται ως εξής<br>
+                <math>Ε(Ω)=<munderover>
+                        <mo>&int;</mo>
+                        <mrow>
+                            <mi>α</mi>
+                        </mrow>
+                        <mrow>
+                            <mi>β</mi>
+                        </mrow>
+                    </munderover>|f(x)|dx</math>.
+            </p><br><br>
+            <p>
+                Το εμβαδό του επιπέδου χωρίου που Ω που περικλείεται από την γραφική παράσταση της <math>f</math>, της <math>g</math> και των κάθετων ευθειών <math>x=α, x=β, &#8712; &#8477;</math> 
+                <br>υπολογίζεται ως εξής 
+                <math>Ε(Ω)=
+                <munderover>
                     <mo>&int;</mo>
                     <mrow>
                         <mi>α</mi>
@@ -413,13 +434,12 @@
                     <mrow>
                         <mi>β</mi>
                     </mrow>
-                </munderover>|f(x)|dx</math>.
-        </p>
-    </div>
-        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 4</h4>
-        <p>Όταν θέλουμε να υπολογίσουμε το εμβαδό ανάμεσα σε δύο συναρτήσεις <math>f(x)</math> και <math>g(x)</math><br>
-            και τις ευθείες x=α και x=β υπολογίζεται ως εξής
-            <math>Ε(Ω)=<munderover>
+                </munderover> (f(x)-g(x))dx
+                </math> και παρουσιάζεται γραφικά παρακάτω.
+                <img src="images/pic_18.png" alt="Ορισμός επιπέδου χωρίου" style="max-width: 30%;height:auto;"><br>
+                Εάν <math>f(x)-g(x)&lt;0</math> τότε υπολογίζουμε το -(f(x)-g(x)).<br>
+                Άρα γενικά ως εμβαδό <math>Ε(Ω)</math> των <math>f,g</math> υπολογίζουμε 
+                 <math>Ε(Ω)=<munderover>
                     <mo>&int;</mo>
                     <mrow>
                         <mi>α</mi>
@@ -428,6 +448,40 @@
                         <mi>β</mi>
                     </mrow>
                 </munderover>|f(x)-g(x)|dx</math>.
+            </p>
+        </div>
+        <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή 5</h4>
+        <p>Όταν θέλουμε να υπολογίσουμε το εμβαδό ανάμεσα σε δύο συναρτήσεις <math>f(x)</math> και <math>g(x)</math><br>
+            και τις ευθείες x=α και x=β υπολογίζεται ως εξής <br>
+            <math>Ε(Ω)=<munderover>
+                <mo>&int;</mo>
+                <mrow>
+                    <mi>α</mi>
+                </mrow>
+                <mrow>
+                    <mi>β</mi>
+                </mrow>
+            </munderover>(f(x)-g(x))dx, για f(x)-g(x)>0&nbsp;&nbsp;και&nbsp;&nbsp; 
+            Ε(Ω)=-<munderover>
+                <mo>&int;</mo>
+                <mrow>
+                    <mi>α</mi>
+                </mrow>
+                <mrow>
+                    <mi>β</mi>
+                </mrow>
+            </munderover>(f(x)-g(x))dx, για f(x)-g(x)&lt;0</math><br>
+            Επομένως στην γενική περίπτωση έχουμε ότι&nbsp;&nbsp;
+            <math>
+            Ε(Ω)=<munderover>
+                    <mo>&int;</mo>
+                    <mrow>
+                        <mi>α</mi>
+                    </mrow>
+                    <mrow>
+                        <mi>β</mi>
+                    </mrow>
+                </munderover>|f(x)-g(x)|dx</math>.<br>
             Στο παρακάτω σχήμα παρουσιάζονται οι γραφικές παραστάσεις <math>f(x)=x</math> και <math>g(x)=x&sup3;</math>.
             Έστω <math>h(x)=f(x)-g(x)</math>. Η παράγουσα της συνάρτησης αυτής είναι η <math>H(x)=<mfrac>
                     <mi>x&sup2;</mi>
@@ -472,21 +526,23 @@
         <h4 style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;Εφαρμογή Αξιολόγησης</h4>
         <p>
             Παρακάτω παρουσιάζεται η γραφική παράσταση της συνάρτησης <math>f(x)=e<sup>x</sup>+x</math>.<br>
-            Η εφαρμογή δίνει τις τιμές <math>α, β</math> και ζητά την λύση του ολοκληρώματος 
+            Η εφαρμογή δίνει τις τιμές <math>α, β</math> και ζητά τον υπολογισμό του ολοκληρώματος
             <math>
-            <munderover>
-                <mo>&int;</mo>
-                <mrow>
-                    <mi>α</mi>
-                </mrow>
-                <mrow>
-                    <mi>β</mi>
-                </mrow>
-            </munderover>f(x)dx
-        </math>.<br>
-        </p><a style="font-size: 16px;" href="javascript:void(0)" onclick="show_theory('show_help');">Προβολή Βοήθειας</a><br><br>
+                <munderover>
+                    <mo>&int;</mo>
+                    <mrow>
+                        <mi>α</mi>
+                    </mrow>
+                    <mrow>
+                        <mi>β</mi>
+                    </mrow>
+                </munderover>f(x)dx
+            </math>.<br>
+        </p><a style="font-size: 16px;" href="javascript:void(0)" onclick="show_theory('show_help');">Προβολή
+            Βοήθειας</a><br><br>
         <div id="show_help">
-            Έχω ότι η παράγουσα της <math>f(x)=e<sup>x</sup>+x</math> είναι η <math>F(x)=e<sup>x</sup>+x<sup>2</sup></math>,με την <math>G(x)=F(x)+x, c &#8712; &#8477; </math><br>
+            Έχω ότι η παράγουσα της <math>f(x)=e<sup>x</sup>+x</math> είναι η
+            <math>F(x)=e<sup>x</sup>+x<sup>2</sup></math>,με την <math>G(x)=F(x)+x, c &#8712; &#8477; </math><br>
             Επομένως το ολοκλήρωμα έχει την τιμή <math>
                 <munderover>
                     <mo>&int;</mo>
@@ -500,18 +556,24 @@
             </math>.
             <br><br>
         </div>
-        <canvas style="background-color: white;border:1px solid black;" width="500" height="350"
-        id="application_5"> </canvas><br><br>
-        <math><munderover>
-            <mo>&int;</mo>
-            <mrow>
-                <mi><label id="app_5_a"></label></mi>
-            </mrow>
-            <mrow>
-                <mi><label id="app_5_b"></label></mi>
-            </mrow>
-        </munderover>f(x)dx</math>=&nbsp;&nbsp;<input type="text" style="width:15%;" id="app_5_answer">&nbsp;&nbsp;&nbsp;<label id="app_5_result"></label><br><br>
-        <button type="button" onclick="application_5_check();">Έλεγχος Απάντησης</button>&nbsp;&nbsp;<button type="button" onclick="application_5_solve();">Προβολή Απάντησης</button>&nbsp;&nbsp;<button type="button" onclick="application_5_initialize_test();">Νέα Προσπάθεία</button>
+        <canvas style="background-color: white;border:1px solid black;" width="500" height="350" id="application_5">
+        </canvas><br><br>
+        <math>
+            <munderover>
+                <mo>&int;</mo>
+                <mrow>
+                    <mi><label id="app_5_a"></label></mi>
+                </mrow>
+                <mrow>
+                    <mi><label id="app_5_b"></label></mi>
+                </mrow>
+            </munderover>f(x)dx
+        </math>=&nbsp;&nbsp;<input type="text" style="width:15%;" id="app_5_answer">&nbsp;&nbsp;&nbsp;<label
+            id="app_5_result"></label><br>
+            <p>Συμπλήρωσε την τιμή που υπολόγισες με ακρίβεια έως δύο δεκαδικά ψηφία.</p>
+        <button type="button" onclick="application_5_check();">Έλεγχος Απάντησης</button>&nbsp;&nbsp;<button
+            type="button" onclick="application_5_solve();">Προβολή Απάντησης</button>&nbsp;&nbsp;<button type="button"
+            onclick="application_5_initialize_test();">Νέα Προσπάθεια</button>
         <label id="values"></label>
 
         <br><br><br><br>

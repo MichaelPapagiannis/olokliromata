@@ -124,9 +124,10 @@ function application_1_use(value) {
         }
 
     }
-    percentage = (value - 1) / (30 - 1);
+    percentage = (value-1) / (30-1);
     percentage = (0.988 - 0.334) * percentage + 0.334;
-    document.getElementById('area').innerHTML = Math.round(15 * percentage * 1000) / 1000;
+    area=percentage+0.068*(0.988-percentage)/(0.988 - 0.334);
+    document.getElementById('area').innerHTML = Math.round(15 * (area) * 1000) / 1000;
     percentage = percentage * 100;
     document.getElementById('area_percentage').innerHTML = Math.round(percentage * 100) / 100;
 
@@ -386,8 +387,8 @@ function application_3_use(value) {
     document.getElementById('app_3_a_int_g').innerHTML = pi_term;
     document.getElementById('app_3_ma_int_syn').innerHTML = m_pi_term;
     document.getElementById('app_3_a_int_syn').innerHTML = pi_term;
-    sina = Math.round(Math.cos(x) * 100) / 100;
-    sinma = Math.round(Math.cos(-x) * 100) / 100;
+    sina = -Math.round(Math.cos(x) * 100) / 100;
+    sinma = -Math.round(Math.cos(-x) * 100) / 100;
     document.getElementById('syn_a').innerHTML = sina;
     if (sinma < 0) {
         document.getElementById('syn_ma').innerHTML = '(' + sinma + ')';
@@ -875,10 +876,11 @@ function application_5_check(){
     b=document.getElementById("app_5_b").innerHTML;
     res=Math.pow(Math.E,b)+Math.pow(b,2)/2-Math.pow(Math.E,a)-Math.pow(a,2)/2;
     result= document.getElementById('app_5_answer').value;
-    check=res/result;
-    if(check>0.99){
+    
+    if(Math.round(res*10)/10==Math.round(result*10)/10){
         document.getElementById('app_5_result').innerHTML='<b>Σωστή Απάντηση</b>';
     }else{
         document.getElementById('app_5_result').innerHTML='<b>Λάθος Απάντηση</b>';
     }
 }
+
